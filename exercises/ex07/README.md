@@ -179,11 +179,7 @@ The value of the carbon footprint should be 25% of the booking fee.
 
 Use existing RAP patterns within the package.
 ```  
-> ℹ️ **Info**:  You see whether the coding agent chooses ...
->- determination,
->- validation, or
->- save logic  
->and you must review the proposal.
+> ℹ️ **Info**: Verify that the coding agent implements an on-modify determination triggered by changes to the booking-fee field, using its generated CDS field name. A validation or save-only calculation does not provide the interactive recalculation required by this exercise.
 
 The coding agent lists the development objects where the new business logic will be added and implemented. 
 
