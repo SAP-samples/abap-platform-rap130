@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In this exercise, you will generate ABAP Unit tests for the ABAP helper class **'ZCL_TRAVEL_HELPER_###'**, fix any issues, and run the tests—all in a single step in your package 'ZRAP13O_###'.
+In this exercise, you will generate ABAP Unit tests for the ABAP helper class **'ZCL_TRAVEL_HELPER_###'**, fix any issues, and run the tests—all in a single step in your package 'ZRAP130_###'.
 
 ### Exercises
 
