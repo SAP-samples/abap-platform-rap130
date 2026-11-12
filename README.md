@@ -105,7 +105,7 @@ This session is managed by several experts of SAP. Please raise your hand if you
 
 In case you find a software issue, we kindly ask you to create a [customer incident](https://me.sap.com/notes/1296527/E) using component **BC-DWB-AIV**. Thank you for your help!
 
-Otherwise, we kindly ask you to create a [Create an issue](https://github.com/SAP-samples/abap-platform-ad160/issues) in this repository if you find a bug or have questions about the content. Thank you for your help!
+Otherwise, we kindly ask you to [create an issue](https://github.com/SAP-samples/abap-platform-rap130/issues) in this repository if you find a bug or have questions about the content. Thank you for your help!
  
 For additional support, [ask a question](https://answers.sap.com/questions/ask.html) or see [ABAP Development](https://pages.community.sap.com/topics/abap) in SAP Community.
 
