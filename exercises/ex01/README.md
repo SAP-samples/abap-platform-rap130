@@ -1,183 +1,256 @@
-[Home - RAP130 - Build SAP Fiori Apps with ABAP Cloud and SAP Joule for Developers in Visual Studio Code](../../README.md)
+[Home - RAP130 - Build apps and web APIs with ABAP Cloud using agentic AI](../../README.md)
 
-# Exercise 1: Enable the ADT MCP Server 💎
+# Exercise 1: Enable the ADT MCP Server
 
 ## Introduction
+The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) is an open-source standard that allows AI models to securely communicate with external tools, applications, and data sources through a common protocol.
 
-In the previous exercise, you installed Visual Studio Code and the ADT for Visual Studio Code extension, and connected to your ABAP system (_see [Getting Started](../ex0/README.md)_).
+The **ABAP Development Tools for Visual Studio Code** (ADT) extension contains the **ADT MCP server** as a local HTTP server that runs inside the ADT extension. It implements the Model Context Protocol (MCP) to call ADT MCP tools in a structured, authenticated way and exposes ABAP development capabilities as ADT MCP tools. 
 
-In this exercise, you will enable the **ADT MCP Server** that is built into the ADT for Visual Studio Code extension, and verify that the MCP tools are available.
+This means, the ADT MCP server exposes a set of ABAP development tools (so-called ADT MCP tools) to any MCP-compatible AI assistant. This allows you to create packages, to create transport requests, to generate complete RAP applications, activate objects, and more through natural language prompts.  
 
-The ADT MCP Server exposes ABAP development capabilities as **Model Context Protocol (MCP) tools** — allowing you to create packages, create transports, generate complete RAP applications, activate objects, and more through natural language prompts. For more information, see [Agentic AI for ABAP Development](https://help.sap.com/docs/abap-cloud/abap-development-tools-for-visual-studio-code/agentic-ai-development?locale=en-US)
+## Procedure 
+At first, you need to enable the ADT MCP server in the settings of your ABAP Development Tools (ADT) extension manually. Otherwise, the coding agent has no access to the ADT MCP tools.  
+
+You will use your coding agent in **Agent** mode together with the ADT MCP tools to generate a RAP UI service using the ABAP Cloud Generator and to create a complete transactional app ('Travel' + 'Booking' entities)—all driven by natural language prompts using the coding agent provided in the **Chat** view.  
+
+>ℹ️ **Note**:  This hands-on session uses [**GitHub Copilot**](https://docs.github.com/en/copilot/get-started/quickstart) as coding agent. You can also use other Chat-based coding agent as well as Command Line Interface (CLI)-based coding agents, such as [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code).
+
+> ⚠ **Warning regarding AI outputs** ⚠  
+> The ADT MCP server is an **experimental feature** that may change at any time without notice. It is not intended for productive use. Please back up your data before using it.
+
+### Further Information
+- [ADT MCP Tools](https://help.sap.com/docs/abap-cloud/abap-development-tools-for-visual-studio-code/mcp-tools?locale=en-US) 
+- [Model Context Protocol (MCP)](https://modelcontextprotocol.io/)
+- [ADT Security Considerations and Recommendations](https://help.sap.com/docs/abap-cloud/abap-development-tools-for-visual-studio-code/security-recommendations-and-considerations)  
+- [Agentic AI for ABAP Development](https://help.sap.com/docs/abap-cloud/abap-development-tools-for-visual-studio-code/agentic-ai-development?locale=en-US)  
+
+---
+
+## Prerequisites
+
+ To work with agentic-based ABAP development, you need to install a supported coding agent and to purchase a license for it. 
+ 
+ This hands-on session is based on [GitHub Copilot](https://github.com/features/copilot).  
+
+---
 
 ### Exercises
 
-- [1.1 - Enable the ADT MCP Server in Visual Studio Code Settings](#exercise-11-enable-the-adt-mcp-server-in-visual-studio-code-settings)
-- [1.2 - Verify the MCP Server is Running](#exercise-12-verify-the-mcp-server-is-running)
-- [1.3 - Verify the ADT MCP Tools in your coding agent](#exercise-13-verify-the-adt-mcp-tools-in-your-coding-agent)
+- [1.1 - Enable the ADT MCP Server](#exercise-11-enable-the-adt-mcp-server)
+- [1.2 - Add the Destination and the ABAP Package to the Allowlist](#exercise-12-add-the-destination-and-the-abap-package-to-the-allowlist)
+- [1.3 - Verify the ADT MCP Server is Running](#exercise-13-verify-the-adt-mcp-server-is-running)
+- [1.4 - Verify the Availability of the ADT MCP Tools in the Chat View](#exercise-14-verify-the-availability-of-the-adt-mcp-tools-in-the-chat-view)
 - [Summary & Next Exercise](#summary--next-exercise)
 
-> ℹ️ **Reminder**: Don't forget to replace all occurrences of the placeholder **`###`** with your group ID in the exercise steps below.
-
 ---
 
-## About the ADT MCP Server 💎
-
-The **ADT MCP Server** is a local HTTP server that runs inside the ADT for Visual Studio Code extension. It implements the **Model Context Protocol (MCP)**, an open standard that allows AI assistants (like GitHub Copilot) to call tools in a structured, authenticated way.
-
-When enabled, the MCP server exposes a set of ABAP development tools to any MCP-compatible AI client. In this workshop, the exercises use **GitHub Copilot** as the client. Any coding agent that supports Visual Studio Code's virtual workspace filesystem is compatible — GitHub Copilot is confirmed; others are also supported.
-
-**Key tools available via the ADT MCP Server:**
-
-| Tool | Description |
-|------|-------------|
-| `abap_activate-objects` | Activates ABAP objects in the backend system |
-| `abap_business_services-fetch_service_information` | Fetches OData service metadata |
-| `abap_creation-create_object` | Creates ABAP development objects |
-| `abap_generators-list_generators` | Lists available ABAP RAP generators |
-| `abap_generators-get_schema` | Retrieves the JSON schema for a generator |
-| `abap_generators-generate_objects` | **Runs a RAP generator** — the key tool for Exercise 2 |
-| `abap_run_unit_tests` | Runs ABAP unit tests for a given set of objects |
-| `abap_transport-create` | Creates a transport request |
-| `abap_transport-get` | Gets relevant transport requests for an object |
-
-See [ADT MCP Tools](https://help.sap.com/docs/abap-cloud/abap-development-tools-for-visual-studio-code/mcp-tools?locale=en-US) for the complete list of tools available.
-
-> ⚠ **Warning regarding AI outputs** ⚠
-> The ADT MCP Server is an **experimental feature** that may change at any time without notice. It is not intended for productive use. Please back up your data before using it.
-
-> **Further reading**: [Model Context Protocol (MCP)](https://modelcontextprotocol.io/)
-
----
-
-## Exercise 1.1: Enable the ADT MCP Server in Visual Studio Code Settings
+## Exercise 1.1: Enable the ADT MCP Server
 [^Top of page](#)
 
-> Enable the built-in ADT MCP Server in the Visual Studio Code extension settings.
+> Enable the settings of the built-in ADT MCP server in the ADT extension.
+
 
 <details>
-  <summary>🔵 Click to expand!</summary>
+  <summary>🔵 Click to expand</summary>
 
-1. Open **Visual Studio Code Settings**:
-   - Open the **Command Palette** with **`Ctrl+Shift+P`** (macOS: **`Cmd+Shift+P`**)
-   - Type `Preferences: Open Settings (UI)` and select **Preferences: Open Settings...**.
+1. Open the **Command Palette** with **`Ctrl+Shift+P`** (macOS: **`Cmd+Shift+P`**).
+
+2. Type **Preferences: Open Settings (UI)** and select the finding from the list.
+
+   The **Settings** landing page is opened. Click into the search bar.
+   
+   ![Search bar on the Settings page.](images/ex01_settings_vs_code_initial.png)
 
 2. In the search bar, type:
+
    ```
    adt mcp
    ```
+   The findings in the **Extensions > ABAP Development** node are displayed.
 
-3. Locate the setting **"Adt: Enable MCP Server"** (or similar) and **enable it** by checking the checkbox.
 
-   > ℹ️ **Hint**: You can also switch to JSON mode (click the `{}` icon top-right in Settings) and add:
-   > ```json
-   >  "adt.mcpServer.enabled": true
-   > ```
+3.  Locate the **Adt: Enable MCP Server** setting (or similar) and select the checkbox.
 
-4. Optionally, you can configure the **MCP server port** (default: `2236`). Only change this if port 2236 is occupied on your machine:
-   - Search for `ADT MCP port` in Settings
-   - Set it to any available port between `0` and `65535`
+      ![ADT MCP server setting enabled](images/ex01_adt_settings_enable_mcp.png)
+<!--
+   ℹ️ **Hint**: You can also switch to JSON mode (click the '{}' icon top-right in settings) and add:  
+   
+   ```
+   json 'adt.mcpServer.enabled': true  
+   ```
+   -->
 
-5. **Reload Visual Studio Code** if prompted, or close and reopen the application.
+4. [Optional:] If relevant, you can configure the **MCP server port** manually.   
+   > ℹ️ **Note**: The default is '2236'. Only change this if port '2236' is occupied on your machine. Proceed then as follows:  
+   a. Search for **ADT MCP port** in the settings.   
+   b. Set it to the relevant port between '0' and '65535'.
 
-   ![ADT MCP Server setting enabled](images/ex1_mcp_setting.png)
+   ![ADT MCP server port](images/ex01_adt_mcp_server_port.png)
+   
 
-> ⚠️ **Important**: Make sure your system destination is still added to the workspace (from Exercise 0.4). The MCP server only starts once a destination is active in the workspace.
+5. To make the enablement effective, choose **Reload Visual Studio Code** if prompted, or close and reopen Visual Studio Code.
+
+   > ⚠️ **Important**: 
+   >- Make sure your destination is still added to the workspace and you are logged on to the ABAP system. The ADT MCP server only starts once a destination is active in the workspace.
+   >- When starting the ADT MCP server, a token is initially generated and will be used to access the ADT MCP server. When enabling the checkbox from above the first time, it may take a few seconds until the token will be generated and displayed.  
+   > ![Sample for a generated token](images/ex01_adt_mcp_token.png)  
+   
+</details>
+
+---
+
+## Exercise: 1.2 Add the Destination and ABAP Package to the Allowlist
+[^Top of page](#)
+
+> Allow the ADT MCP tools to access the development objects in your ABAP package through your destination.
+   
+   > ℹ️ **Note**: To enable ADT MCP tools access to destinations, packages, and namespaces, you need to add them to the respective allowlist. Otherwise, the ADT MCP tools have no access to the development objects.
+
+<details>
+  <summary>🔵 Click to expand</summary>
+
+1. Reopen the ADT MCP settings. See [Enable the ADT MCP Server](#exercise-11-enable-the-adt-mcp-server)
+
+2.  Locate the **Adt > Mcp Server: Access Restrictions Enabled** setting (or similar) and select the checkbox.
+
+   ![Checkbox to enable the allowlist](images/ex01_adt_mcp_allowlist1.png)
+
+3.  In the section **Adt > Mcp Server: Access Restrictions**, check the **Edit** icon for the **Item** 'destinations' and enter the name of the destination as **Value**. 
+
+   ![ADT MCP Server setting enabled](images/ex01_adt_mcp_allowlist2a.png)
+
+
+4. Enter the name of the ABAP package for the **Item** 'packages-objectChanges' as **Value** on the same way.
+
+   ![ADT MCP Server setting enabled](images/ex01_adt_mcp_allowlist3.png)
+
+5. Confirm with **OK**.
+
+The destination and the ABAP package are added to the allowlist and can now be accessed through the ADT MCP server.
+
+![Display of the allowed destinations](images/ex01_adt_mcp_allowlist4.png)
 
 </details>
 
 ---
 
-## Exercise 1.2: Verify the MCP Server is Running
+## Exercise: 1.3 Verify the ADT MCP Server is Running
 [^Top of page](#)
 
-> Confirm that the ADT MCP Server started successfully.
+> Check and verify that the ADT MCP server has been started and is running.
+
+> ℹ️ **Note**: To use the ADT MCP tools in ADT for VS Code, the ADT MCP Server needs to run. 
 
 <details>
-  <summary>🔵 Click to expand!</summary>
 
-After enabling the setting and having a destination in the workspace, the server should start automatically.
+You have the following methods for verification:
 
-### Method 1: Check for the startup notification
+**Method 1: Check for the startup notification**
 
-1. Look at the **bottom-right corner** of Visual Studio Code for a notification:
-   ```
-   ADT MCP Server running on port 2236
-   ```
+1. Look at the bottom-right corner for a notification in the status bar.
 
-   ![ADT MCP Server running](images/ex1_mcp_running.png)
+2. Select the **Notifications** icon with the bell from the status bar on the right bottom.
 
-   > ℹ️ If you don't see the notification, proceed to Method 2.
+   ![ADT MCP Server running](images/ex01_mcp_running.png)
 
-### Method 2: Check via MCP Server list
+**Method 2: Check using the MCP server list**
 
 1. Open the **Command Palette** (**`Ctrl+Shift+P`**).
 
-2. Type:
+2. Type ...  
+
    ```
-   >MCP: List Servers
+   >MCP:List Servers
    ```
 
-3. Select **"MCP: List Servers"** from the list.
+3. Select **`MCP: List Servers`** from the list.  
 
-4. You should see an entry for **ADT MCP Server** in the quick pick list.
+    You should see an entry for **ADT MCP Server** in the quick pick list.
+   
+   ![MCP Server listed and running](images/ex01_mcp_list_servers.png)
 
-5. Select it and click **Start Server** if it is not already running.
+4. If the **ADT MCP Server** is stopped, select the entry and choose **Start Server**.
 
-   ![MCP Server listed and running](images/ex1_mcp_list_servers.png)
+   ![MCP Server listed and running](images/ex01_mcp_list_server_started.png)
 
-### Troubleshooting
+   After selection, the ADT MCP server is displayed as running.
 
-If the ADT MCP Server does not appear or fails to start:
+   ![Running ADT MCP server](images/ex01_mcp_server_running.png)
 
-1. **Disable and re-enable** the "Adt: Enable MCP Server" setting.
-2. **Remove** the destination folder from the workspace and **add it back** (Command Palette → `ABAP: Add Destination as Folder to the Workspace...`).
-3. **Restart** Visual Studio Code.
+
+
+**Method 3: Check the display in the Output view**
+
+1. Open the **Output** view beneath the editor.
+
+   ![MCP Server listed in the Output view](images/ex01_output_server.png)
+
+2. Select **MCP: ADT MCP Servers** from the drop-down list in the integrated toolbar.
+
+   Then, the status will be displayed in the **Output** view.
+
+   ![MCP Server listed and running in the Output view](images/ex01_output_verfication_mcp.png)
+
+---
+
+### Troubleshooting*
+
+If the ADT MCP server does not appear or fails to start:
+
+1. Disable and re-enable the **Adt: Enable MCP Server** setting.
+
+2. Remove the destination folder from the workspace by choosing **Remove Folder from Workspace** from the context menu. 
+
+<!--
+   > ℹ️ **Hint**: In addition, you can also run **>ABAP: Open Destination Settings (JSON)** from the Command Palette and remove the relevant enty. Restart then Visual Studio Code. You then need to create and add the destionation once again.
+-->
+
+3. Add it back from the command palette (**`Ctrl+Shift+P`** (macOS: **`Cmd+Shift+P`**)) and choose **Add Destination as Folder to Workspace**.
+
+3. Type ...
+   ```
+   ABAP: Add Destination as Folder to the Workspace...
+   ```
+
+4.  Select **`>ABAP: Add Destination as Folder to the Workspace...`** from the list. 
+
+5. Enter/select the name of the destination and confirm.
+
+6. Restart Visual Studio Code.
 
 </details>
 
 ---
 
-## Exercise 1.3: Verify the ADT MCP Tools in your coding agent
+## Exercise: 1.4 Verify the Availability of the ADT MCP Tools in the Chat View
 [^Top of page](#)
 
-> Open your coding agent in agent mode and confirm that the ADT MCP tools are loaded and available.
+> Open the **Chat** view of your coding agent in the agent mode. Confirm that the ADT MCP tools are available.
 
 <details>
-  <summary>🔵 Click to expand!</summary>
-
-1. Open **GitHub Copilot Chat** in Visual Studio Code:
-   - Click the **Copilot icon** in the Activity Bar (left), or
-   - Press **`Ctrl+Shift+I`** (macOS: **`Cmd+Shift+I`**)
-
-2. Switch the chat mode to **"Agent"** in the chat dropdown.
-
-   > ℹ️ **Note**: MCP tools are only available in **Agent mode** — not in the standard Ask or Edit modes.
-
-3. Click the **"Configure Tools"** (tools wrench icon) button in the Copilot chat input bar.
-
-4. A quick pick list appears showing available tool providers. You should see:
-   - **ADT MCP Server** with a list of tools below it (e.g., `abap_generators-list_generators`, `abap_creation-create_object`, etc.)
 
 
-   > ✅ If you see the ADT MCP Server and its tools listed, your setup is complete!
+1. If the **Chat** view is not displayed by default, open the GitHub Copilot **Chat** view in Visual Studio Code.  
 
-   ![ADT MCP tools visible in Copilot Configure Tools](images/ex1_mcp_tools_visible.png)
+   You have the following possibilities to do this:  
+    >- Click the **Copilot** icon in the **Activity Bar** (left), **or**
+    >- choose *`View`* > *`Chat`* from the menu, **or**
+    >- press **`Ctrl+Shift+I`** (macOS: **`Cmd+Shift+I`**)  
 
-5. Make sure the ADT MCP Server tools are **checked/enabled** in the list.
+2. Click the **Configure Tools** (tools wrench icon) button in the Copilot chat input bar.  
+   A quick pick list appears showing available tool providers. 
 
-6. **Sanity test** — type the following prompt in your coding agent's chat and press **Enter**:
-   ```
-   List all available ABAP RAP generators using the MCP tool.
-   ```
+      ![Icon to open the Configure Tools dialog](images/ex01_configure_tools_icon.png)
 
-   Your coding agent will request to call the `abap_generators-list_generators` tool. **Allow** the tool call when prompted.
+      Here, you see the **ADT MCP Server** node with a list of the available ADT MCP tools, e.g., 'abap_generators-list_generators', 'abap_creation-create_object', and so on.
 
-   You should see a list of available generators returned, including an entry for **"OData UI Service from Scratch"**.
+      ![List of the available ADT MCP Tools](images/ex01_adt_mcp_server_tools_list.png)
 
-   > ✅ If you see generator names returned, the ADT MCP Server is working correctly with your coding agent!
+3. Check and ensure that the ADT MCP tools are **checked/enabled** in the list.
    
-   ![Available ABAP RAP Generators](images/ex1_available_generators.png)
+   > ℹ️ **Information**: 
+   If you see the ADT MCP server and its ADT MCP tools are listed, your setup is complete!
 
 </details>
 
@@ -187,10 +260,8 @@ If the ADT MCP Server does not appear or fails to start:
 [^Top of page](#)
 
 Now that you've:
-- Enabled the ADT MCP Server in Visual Studio Code extension settings
-- Verified the server is running (via notification or `MCP: List Servers`)
-- Confirmed that the ADT MCP tools are visible and callable from your coding agent in agent mode
+- Enabled and verified the ADT MCP server and ADT MCP tools
 
-you can continue with the next exercise — **[Exercise 2: Generate the SAP Fiori App via MCP Tools](../ex02/README.md)**
+you can continue with the next exercise — **[Exercise 2: Generate the RAP UI Service with ADT MCP Tools and Preview the Travel App](../ex02/README.md)**
 
----
+----
