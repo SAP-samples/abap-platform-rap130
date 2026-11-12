@@ -187,7 +187,7 @@ Use existing RAP patterns within the package.
 
 The coding agent lists the development objects where the new business logic will be added and implemented. 
 
-As a result, the value of field **booking_fee** is calculated.
+As a result, the value of field **CarbonFootprint** is calculated as 25% of the booking fee.
 
 </details>
 
