@@ -492,7 +492,7 @@ You have the following possibilities:
 
 3. Use **`Ctrl+Shift+A`** to quickly open any object by name. You can use wildcards, for example,  asterisk '*' search for `*RAP*`.
 
-4. To activate, choose **`F3`** for single activation or **`Ctrl+F3`** for mass activation.
+4. To activate, choose **`Ctrl+F3`** for single activation or **`Ctrl+Shift+F3`** for mass activation.
 
     > ℹ️ **Note**: Objects with unsaved backend changes are marked **(L)**. They must be **activated** to become active in the ABAP system. 
 
