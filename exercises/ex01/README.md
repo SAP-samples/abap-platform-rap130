@@ -10,7 +10,7 @@ The **ABAP Development Tools for Visual Studio Code** (ADT) extension contains t
 This means, the ADT MCP server exposes a set of ABAP development tools (so-called ADT MCP tools) to any MCP-compatible AI assistant. This allows you to create packages, to create transport requests, to generate complete RAP applications, activate objects, and more through natural language prompts.  
 
 ## Procedure 
-At first, you need to enable the ADT MCP server in the settings of your ABAP Development Tools (ADT) extension manually. Otherwise, the coding agent has no access to the ADT MCP tools.  
+At first, you need to [enable the ADT MCP server](https://help.sap.com/docs/abap-cloud/abap-development-tools-for-visual-studio-code/enabling-adt-mcp-server) in the settings of your ABAP Development Tools (ADT) extension manually. Otherwise, the coding agent has no access to the ADT MCP tools.  
 
 You will use your coding agent in **Agent** mode together with the ADT MCP tools to generate a RAP UI service using the ABAP Cloud Generator and to create a complete transactional app ('Travel' + 'Booking' entities)—all driven by natural language prompts using the coding agent provided in the **Chat** view.  
 
@@ -38,9 +38,10 @@ You will use your coding agent in **Agent** mode together with the ADT MCP tools
 ### Exercises
 
 - [1.1 - Enable the ADT MCP Server](#exercise-11-enable-the-adt-mcp-server)
-- [1.2 - Add the Destination and the ABAP Package to the Allowlist](#exercise-12-add-the-destination-and-the-abap-package-to-the-allowlist)
-- [1.3 - Verify the ADT MCP Server is Running](#exercise-13-verify-the-adt-mcp-server-is-running)
-- [1.4 - Verify the Availability of the ADT MCP Tools in the Chat View](#exercise-14-verify-the-availability-of-the-adt-mcp-tools-in-the-chat-view)
+- [1.2 - Enable the ADT Edit File Tool to Modify ABAP Development Objects When Using CLI-Based Coding Agents](#exercise-12-enable-the-adt-edit-file-tool-to-modify-abap-development-objects-when-using-cli-based-coding-agents)
+- [1.3 - Add the Destination and ABAP Package to the Allowlist](#exercise-13-add-the-destination-and-abap-package-to-the-allowlist)
+- [1.4 - Verify the ADT MCP Server is Running](#exercise-14-verify-the-adt-mcp-server-is-running)
+- [1.5 - Verify the Availability of the ADT MCP Tools in the Chat View](#exercise-15-verify-the-availability-of-the-adt-mcp-tools-in-the-chat-view)
 - [Summary & Next Exercise](#summary--next-exercise)
 
 ---
@@ -100,7 +101,33 @@ You will use your coding agent in **Agent** mode together with the ADT MCP tools
 
 ---
 
-## Exercise: 1.2 Add the Destination and ABAP Package to the Allowlist
+## Exercise: 1.2 Enable the ADT Edit File Tool to Modify ABAP Development Objects When Using CLI-Based Coding Agents
+[^Top of page](#)
+
+> (Optional:) You can allow native edit tools of the coding agent to edit ABAP development objects.  
+
+
+> ℹ️ **Important Note**: This setting is only relevant when you use a CLI-based coding agent, e. g. Claude Code. If you miss selecting this checkbox, ADT for VS Code is using a virtual file system implementation which **cannot** be accessed by the native edit tools of the coding agent. In this case, also the correct transport handling is **not** ensured. 
+> This setting is **not** relevant when you use the Chat-based coding agents, such as GitHub Copilot.
+
+<details>
+  <summary>🔵 Click to expand</summary>
+  
+1. Reopen the ADT MCP settings. See [Enable the ADT MCP Server](#exercise-11-enable-the-adt-mcp-server)
+
+2.  Locate the **Adt > Mcp Server: Enable Edit File Tool For ABAP Objects** setting (or similar) and select the checkbox.
+
+      ![Checkbox to enable the native VS Code edit tools to edit ABAP development tools](images/ex01_adt_mcp_tools_edit_area.png)
+
+ The checkbox is marked as selected. Now, CLI-based coding agents can edit ABAP development objects. 
+ 
+ ![Checkbox to enable the allowlist](images/ex01_adt_mcp_tools_edit_active.png)
+
+</details>
+
+---
+
+## Exercise: 1.3 Add the Destination and ABAP Package to the Allowlist
 [^Top of page](#)
 
 > Allow the ADT MCP tools to access the development objects in your ABAP package through your destination.
@@ -135,7 +162,7 @@ The destination and the ABAP package are added to the allowlist and can now be a
 
 ---
 
-## Exercise: 1.3 Verify the ADT MCP Server is Running
+## Exercise: 1.4 Verify the ADT MCP Server is Running
 [^Top of page](#)
 
 > Check and verify that the ADT MCP server has been started and is running.
@@ -223,7 +250,7 @@ If the ADT MCP server does not appear or fails to start:
 
 ---
 
-## Exercise: 1.4 Verify the Availability of the ADT MCP Tools in the Chat View
+## Exercise: 1.5 Verify the Availability of the ADT MCP Tools in the Chat View
 [^Top of page](#)
 
 > Open the **Chat** view of your coding agent in the agent mode. Confirm that the ADT MCP tools are available.
