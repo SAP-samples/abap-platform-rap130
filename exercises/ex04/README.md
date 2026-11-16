@@ -116,13 +116,15 @@ In this exercise, you will use your coding agent in **Agent** mode to define and
    ![Setting in GitHub Copilot 'Plan' mode](images/ex04_github_copilot_set_plan.png)
 
    ```
-   Add the validation validateCustomer. 
+   Add the validation "validateCustomer". 
    
-   In its implementation, the method validate_customer from the ABAP Class ZCL_TRAVEL_HELPER_### should be used.  
+   The method "validate_customer" of the ABAP class ZCL_TRAVEL_HELPER_### should be used in the "validateCustomer" implementation.  
 
-   Add the validation to the prepare action.
+   Add the validation to the "prepare" action.
+
+   Test the changes and fix possible errors in the ABAP source code.
    
-   Ask to review changes before proceeding with the activation.
+   Ask to review changes before proceeding with activation.
    ```
 
 3. Your coding agent will propose changes to both the behavior definition and the implementation class. 

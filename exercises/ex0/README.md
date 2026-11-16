@@ -9,6 +9,11 @@ Before building your app, you need to set up your development environment in Vis
 
 In this exercise, you prepare your PC/laptop to run this tutorial.
 
+> ℹ️ **Hint**: You can watch this video in advance to get an overview about the first steps in **ADT for Visual Studio Code**:  
+><video width="800" controls>
+  <source src="images/ex0_adt_first_steps.mp4" type="video/mp4">
+</video>
+
 ---
 
 **Table of Contents**
@@ -24,7 +29,7 @@ In this exercise, you prepare your PC/laptop to run this tutorial.
 
 Ensure that you have installed a coding agent, e. g. [GitHub Copilot](https://github.com/features/copilot), with a **valid license**.
 
-Ensure that your ABAP system contains and has access to the [ABAP Flight Reference Scenario](https://help.sap.com/docs/abap-cloud/abap-rap/abap-flight-reference-scenario).
+Ensure that your ABAP system contains the [ABAP Flight Reference Scenario](https://help.sap.com/docs/abap-cloud/abap-rap/abap-flight-reference-scenario) and [provides data](https://github.com/SAP-samples/abap-platform-refscen-flight).
 
 ---
 
