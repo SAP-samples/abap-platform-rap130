@@ -398,8 +398,8 @@ The package will be opened in the **Explorer**.
 
 4. Enter the following details:
    - **Name**: `ZRAP130_###` (replace `###` with your group ID)
-   - **Description**: `RAP130 AI Package ###`
-   - **Super Package**: `ZRAP130_INTERN` (Alternatively, you can also use `ZLOCAL`!)
+   - **Description**: `RAP130 AI Demo Package ###`
+   - **Super Package**: `ZLOCAL`
    - **Software Component**: - (Leave this field blank!)
 
    ![Enter the package name ](images/ex0_create_object_name.png)

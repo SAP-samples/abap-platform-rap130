@@ -42,6 +42,7 @@ You will use your coding agent in **Agent** mode together with the ADT MCP tools
 - [1.3 - Add the Destination and ABAP Package to the Allowlist](#exercise-13-add-the-destination-and-abap-package-to-the-allowlist)
 - [1.4 - Verify the ADT MCP Server is Running](#exercise-14-verify-the-adt-mcp-server-is-running)
 - [1.5 - Verify the Availability of the ADT MCP Tools in the Chat View](#exercise-15-verify-the-availability-of-the-adt-mcp-tools-in-the-chat-view)
+- [1.6 - Handle a Temporary Issue of VS Code When Using the ADT MCP Server](#exercise-16-handle-a-temporary-issue-of-vs-code-when-using-the-adt-mcp-server)
 - [Summary & Next Exercise](#summary--next-exercise)
 
 ---
@@ -170,6 +171,7 @@ The destination and the ABAP package are added to the allowlist and can now be a
 > ℹ️ **Note**: To use the ADT MCP tools in ADT for VS Code, the ADT MCP Server needs to run. 
 
 <details>
+  <summary>🔵 Click to expand</summary>
 
 You have the following methods for verification:
 
@@ -256,7 +258,7 @@ If the ADT MCP server does not appear or fails to start:
 > Open the **Chat** view of your coding agent in the agent mode. Confirm that the ADT MCP tools are available.
 
 <details>
-
+  <summary>🔵 Click to expand</summary>
 
 1. If the **Chat** view is not displayed by default, open the GitHub Copilot **Chat** view in Visual Studio Code.  
 
@@ -274,10 +276,37 @@ If the ADT MCP server does not appear or fails to start:
 
       ![List of the available ADT MCP Tools](images/ex01_adt_mcp_server_tools_list.png)
 
-3. Check and ensure that the ADT MCP tools are **checked/enabled** in the list.
+3. Check and ensure that the ADT MCP Tools are **checked/enabled** in the list.
    
    > ℹ️ **Information**: 
    If you see the ADT MCP server and its ADT MCP tools are listed, your setup is complete!
+
+</details>
+
+---
+
+## Exercise: 1.6 Handle a Temporary Issue of VS Code When Using the ADT MCP Server
+[^Top of page](#)
+
+> (Mandatory:) Currently, there is an [issue](https://community.sap.com/t5/abap-forum/i-can-t-see-any-adt-specific-mcp-tools-in-the-tools-currently-available-to/td-p/14521596) when using GitHub Copilot in **ADT for Visual Studio Code**. To use your coding agent in this hands-on session, you need to set the relevant property. Otherwise, an error is displayed when you start ADT MCP Server. As a consequence, you cannot use then the ADT MCP Tools.
+
+<details>
+  <summary>🔵 Click to expand</summary>
+
+1. Open the **Chat** view (**`Ctrl+Shift+I`** (macOS: **`Cmd+Shift+I`**)).
+
+2. [Optional:] If you have already opened the **Chat** view and have already ran a prompt, you need to open a new chat. To do this, choose the **+** drop-down menu from the integrated toolbar on top and choose **New Chat (Ctrl+N)**
+
+      ![Open a new chat](images/ex01_error_new_chat.png)
+
+3. Choose **Copilot** from the toolbar on the bottom of the **Chat** view.
+
+      ![Change the Copilot property](images/ex01_error_toolbar1.png)
+
+4. Choose **Local** from the menu to be opened.
+      ![Select the Local property](images/ex01_error_toolbar2.png)
+   
+You have now selected the relevant property that enables your coding agent to use the ADT MCP Server. 
 
 </details>
 
