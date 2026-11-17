@@ -132,10 +132,7 @@ The ADT extension should be installed and opens the **ABAP Development Tools for
 > Open Visual Studio Code and create a **destination** to establish a system connection to your ABAP system. Add the destination to your workspace. 
 
 > ℹ️ **Hint**: You can watch this video in advance to get an overview about the first steps in **ADT for Visual Studio Code**:  
-><video width="800" controls>
-  <source src="images/ex0_adt_first_steps.mp4" type="video/mp4">
-  Video how to create a destination and an ABAP package
-</video>
+> [Watch: Create a destination and an ABAP package](images/ex0_adt_first_steps.mp4)
 >
 > The following connection types are supported:
 > - **HTTP** — SAP Business AI Platform or SAP S/4HANA Cloud Public Edition  
