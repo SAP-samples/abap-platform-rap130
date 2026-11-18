@@ -307,6 +307,7 @@ If the ADT MCP server does not appear or fails to start:
       ![Select the Local property](images/ex01_error_toolbar2.png)
    
 You have now selected the relevant property that enables your coding agent to use the ADT MCP Server. 
+![Display of the Local property](images/ex01_error_result.png)
 
 </details>
 

@@ -24,7 +24,7 @@ In this exercise, you prepare your PC/laptop to run this tutorial.
 
 Ensure that you have installed a coding agent, e. g. [GitHub Copilot](https://github.com/features/copilot), with a **valid license**.
 
-Ensure that your ABAP system contains and has access to the [ABAP Flight Reference Scenario](https://help.sap.com/docs/abap-cloud/abap-rap/abap-flight-reference-scenario).
+Ensure that your ABAP system contains the [ABAP Flight Reference Scenario](https://help.sap.com/docs/abap-cloud/abap-rap/abap-flight-reference-scenario) and [provides data](https://github.com/SAP-samples/abap-platform-refscen-flight).
 
 ---
 
@@ -130,6 +130,9 @@ The ADT extension should be installed and opens the **ABAP Development Tools for
 [^Top of page](#)
 
 > Open Visual Studio Code and create a **destination** to establish a system connection to your ABAP system. Add the destination to your workspace. 
+
+> ℹ️ **Hint**: You can watch this video in advance to get an overview about the first steps in **ADT for Visual Studio Code**:  
+> [Watch: Create a destination and an ABAP package](images/ex0_adt_first_steps.mp4)
 >
 > The following connection types are supported:
 > - **HTTP** — SAP Business AI Platform or SAP S/4HANA Cloud Public Edition  
@@ -380,7 +383,7 @@ The package will be opened in the **Explorer**.
 > Create your exercise ABAP package.
 
 > ℹ️ **Note**: 
->- For this course, create your new package into the existing superpackage **'ZRAP130_INTERN'** under 'ZLOCAL'.
+>- For this course, create your new package into the existing superpackage **'ZRAP130_DSAG_AK'** under 'ZLOCAL'.
 >- Replace **`###`** with your group ID.
 
 <details>
@@ -399,7 +402,7 @@ The package will be opened in the **Explorer**.
 4. Enter the following details:
    - **Name**: `ZRAP130_###` (replace `###` with your group ID)
    - **Description**: `RAP130 AI Demo Package ###`
-   - **Super Package**: `ZLOCAL`
+   - **Super Package**: `ZRAP130_DSAG_AK`
    - **Software Component**: - (Leave this field blank!)
 
    ![Enter the package name ](images/ex0_create_object_name.png)
@@ -470,6 +473,7 @@ Get familiar with the [**ABAP Developemnt Tools for VS Code**](https://help.sap.
 |--------|---------------|-------|
 | Command Palette | **`Ctrl+Shift+P`** | **`Cmd+Shift+P`** |
 | Open ABAP Object | **`Ctrl+Shift+A`** | **`Cmd+Shift+A`** |
+| Navigate to definition | **`F12`** | **`F12`** |
 | Create ABAP Object | **`Ctrl+Shift+Alt+N`** | **`Cmd+Shift+Option+N`** |
 | Activate object | **`Ctrl+F3`** | **`Cmd+F3`** |
 | Activate all inactive objects | **`Ctrl+Shift+F3`** | **`Cmd+Shift+F3`** |
