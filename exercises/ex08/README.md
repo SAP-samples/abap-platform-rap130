@@ -4,10 +4,10 @@
 
 ## Introduction
 
-In this exercise, you will create a **custom agent** to tailor your coding agent's behaviour for ABAP development in this workshop. A custom agent lets you define specific instructions, naming conventions, context, and tool preferences — so your agent behaves consistently without you having to repeat the same guidance in every prompt.
+In this exercise, you will create a **custom agent** to tailor your coding agent's behaviour for ABAP development. A custom agent lets you define specific instructions, naming conventions, context, and tool preferences — so your agent behaves consistently without you having to repeat the same guidance in every prompt.
 
 For ABAP development with RAP130, a custom agent is useful for telling your coding agent to:
-- Always use the ADT MCP tools for ABAP operations
+- Always use the ADT MCP Tools for ABAP operations
 - Follow RAP naming conventions and use the correct package/group ID
 - Keep ABAP code style consistent with ABAP Cloud restrictions
 
@@ -27,7 +27,7 @@ The official documentation provides an [example of a custom agent for ABAP devel
 
 ---
 
-## Exercise 8.1: Create a Custom Agent (GitHub Copilot) 💎
+## Exercise 8.1: Create a Custom Agent (GitHub Copilot)
 [^Top of page](#)
 
 > Use the agent selector in GitHub Copilot Chat to create a custom agent for ABAP development.
@@ -53,9 +53,9 @@ The official documentation provides an [example of a custom agent for ABAP devel
    You are an ABAP developer building a transactional SAP Fiori elements app using the RAP framework and the ADT MCP Server in Visual Studio Code.
 
    ## Rules
-   - Always use the ADT MCP tools (`abap_generators-*`, `abap_creation-create_object`, `abap_activate-objects`, etc.) for all ABAP backend operations — never generate ABAP code manually when an MCP tool can do it.
-   - My group ID suffix is `###`. Use this suffix in all artifact names (e.g., `ZRAP130_AI_###`, `ZTRAVEL###`, `ZR_TRAVEL###`).
-   - Package for all objects: `ZRAP130_AI_###`.
+   - Always use the ADT MCP Tools (`abap_generators-*`, `abap_creation-create_object`, `abap_activate-objects`, etc.) for all ABAP backend operations — never generate ABAP code manually when an MCP Tool can do it.
+   - My group ID suffix is `###`. Use this suffix in all artifact names (e.g., `ZRAP130_###`, `ZTRAVEL###`, `ZR_TRAVEL###`).
+   - Package for all objects: `ZRAP130_###`.
    ```
 
    > ℹ️ Replace `###` with your group ID in the agent instructions above.
@@ -70,7 +70,7 @@ The official documentation provides an [example of a custom agent for ABAP devel
 
 ---
 
-## Exercise 8.2: Create a Custom Agent (Other Coding Agents) 💎
+## Exercise 8.2: Create a Custom Agent (Other Coding Agents)
 [^Top of page](#)
 
 > Manually create an `agent.md` file to customise the behaviour of your coding agent (Cursor, Cline, or other MCP-compatible agents).
@@ -92,9 +92,9 @@ The official documentation provides an [example of a custom agent for ABAP devel
    You are an ABAP developer building a transactional SAP Fiori elements app using the ABAP RestFul Application  framework and the ADT MCP Server in Visual Studio Code.
 
    ## Rules
-   - Always use the ADT MCP tools (`abap_generators-*`, `abap_creation-create_object`, `abap_activate-objects`, etc.) for all ABAP backend operations — never generate ABAP code manually when an MCP tool can do it.
-   - My group ID suffix is `###`. Use this suffix in all artifact names (e.g., `ZRAP130_AI_###`, `ZTRAVEL###`, `ZR_TRAVEL###`).
-   - Package for all objects: `ZRAP130_AI_###`.
+   - Always use the ADT MCP Tools (`abap_generators-*`, `abap_creation-create_object`, `abap_activate-objects`, etc.) for all ABAP backend operations — never generate ABAP code manually when an MCP Tool can do it.
+   - My group ID suffix is `###`. Use this suffix in all artifact names (e.g., `ZRAP130_###`, `ZTRAVEL###`, `ZR_TRAVEL###`).
+   - Package for all objects: `ZRAP130_###`.
    ```
 
    > ℹ️ Replace `###` with your group ID in the agent instructions above.
@@ -114,7 +114,7 @@ The official documentation provides an [example of a custom agent for ABAP devel
 
 In this exercise, you've learned how to ...  
 - create a custom agent definition to tailor your coding agent's behaviour for ABAP RAP development
-- configure the agent with your group ID, package name, naming conventions, and a preference for ADT MCP tool use
+- configure the agent with your group ID, package name, naming conventions, and a preference for ADT MCP Tool use
 
 A custom agent saves time across all exercises: you no longer need to repeat context about your group ID, package, or RAP conventions in every prompt.
 
@@ -126,7 +126,7 @@ Over this course, you have:
 
 1. ✅ Set up Visual Studio Code with the ADT extension and connected to an ABAP system
 2. ✅ Enabled and configured the ADT MCP Server with your coding agent
-3. ✅ Generated a complete RAP UI service using AI-driven ADT MCP tool calls
+3. ✅ Generated a complete RAP UI service using AI-driven ADT MCP Tool calls
 4. ✅ Explored and adjusted the generated artifacts in Visual Studio Code
 5. ✅ Published the service and previewed the app in the default browser
 6. ✅ Crated a helper class and added a validation

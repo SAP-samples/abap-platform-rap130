@@ -142,7 +142,7 @@ The ADT extension should be installed and opens the **ABAP Development Tools for
   Video how to create a destination and an ABAP package
 </video>  
 >> 
->>This video is relevant when you run the tutorial in your personnel sessions.    
+>>This video is relevant when you run the tutorial on your own.    
 >><video width="800" controls>
   <source src="assests/ex0_adt_first_steps_pers.mp4" type="video/mp4">
   Video how to create a destination and an ABAP package
@@ -475,7 +475,7 @@ Get familiar with the [**ABAP Developemnt Tools for VS Code**](https://help.sap.
 |2| **Command Palette** | At the top | To trigger features and functions |
 |3| **Explorer (Workspace)** | Left sidebar | To navigate your ABAP system hierarchy — packages, object types, objects |
 |4| **Editor** | Center | To edit ABAP source code (classes, CDS views, behavior definitions, etc.) |
-|5| **Hover** | Center | To display code element information) |
+|5| **Hover** | Center | To display code element information |
 |6| **Coding agent chat** (e.g. GitHub Copilot) | Right sidebar or panel | AI-powered **Chat** view. You will run MCP tool prompts here. |
 |7| **Outline** | Left sidebar | For navigation within the structure of ABAP classes and interfaces |
 |8| **Problems** panel | Bottom | Syntax errors and warnings |
