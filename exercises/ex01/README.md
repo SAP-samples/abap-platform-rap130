@@ -144,12 +144,12 @@ You will use your coding agent in **Agent** mode together with the ADT MCP tools
 
    ![Checkbox to enable the allowlist](images/ex01_adt_mcp_allowlist1.png)
 
-3.  In the section **Adt > Mcp Server: Access Restrictions**, check the **Edit** icon for the **Item** 'destinations' and enter the name of the destination as **Value**. 
+3.  In the section **Adt > Mcp Server: Access Restrictions**, check the **Edit** icon for the **Item** 'destinations' and enter the name of your destination 'RAP130' as **Value**. 
 
    ![ADT MCP Server setting enabled](images/ex01_adt_mcp_allowlist2a.png)
 
 
-4. Enter the name of the ABAP package for the **Item** 'packages-objectChanges' as **Value** on the same way.
+4. Enter the name of your ABAP package 'ZRAP130_###' for the **Item** 'packages-objectChanges' as **Value** on the same way.
 
    ![ADT MCP Server setting enabled](images/ex01_adt_mcp_allowlist3.png)
 
@@ -316,9 +316,10 @@ You have now selected the relevant property that enables your coding agent to us
 ## Summary & Next Exercise
 [^Top of page](#)
 
-Now that you've:
-- Enabled and verified the ADT MCP server and ADT MCP tools
+In this exercise, you've learned how to ...
+- enable and to verify the ADT MCP server and ADT MCP tools
 
-you can continue with the next exercise — **[Exercise 2: Generate the RAP UI Service with ADT MCP Tools and Preview the Travel App](../ex02/README.md)**
+You can continue with the exercise:  
+- **[Exercise 2: Generate the RAP UI Service with ADT MCP Tools and Preview the Travel App](../ex02/README.md)**
 
 ----

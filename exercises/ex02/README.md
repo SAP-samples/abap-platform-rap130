@@ -190,10 +190,15 @@ In this hands-on session, the ABAP Cloud Generator is exposed with an underlying
 ## Summary & Next Exercise
 [^Top of page](#)
 
-Now that you've:
-- Generated a complete transactional RAP UI service ('Travel' and 'Booking' entities) using the ADT MCP tools
-- Activated all generated development objects
+In this exercise, you've learned how to ...    
+- generate a complete transactional RAP UI service ('Travel' and 'Booking' entities) using the ADT MCP tools
+- activate all generated development objects
 
-you can continue with the next exercise — **[Exercise 3: Publish and Preview the Travel App](../ex03/README.md)**
+You can continue with the next exercise:  
+- **[Exercise 3: Publish and Preview the Travel App](../ex03/README.md)**  
 
 ----
+
+**[↑ Back to Tutorial Home](../../README.md)**
+
+---

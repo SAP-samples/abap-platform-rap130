@@ -130,12 +130,24 @@ The ADT extension should be installed and opens the **ABAP Development Tools for
 [^Top of page](#)
 
 > Open Visual Studio Code and create a **destination** to establish a system connection to your ABAP system. Add the destination to your workspace. 
-
-> ℹ️ **Hint**: You can watch this video in advance to get an overview about the first steps in **ADT for Visual Studio Code**:  
-> [Watch: Create a destination and an ABAP package](images/ex0_adt_first_steps.mp4)
 >
-> The following connection types are supported:
+>When creating a destination, the following connection types are supported:
 > - **HTTP** — SAP Business AI Platform or SAP S/4HANA Cloud Public Edition  
+
+>> ℹ️ **Hint**:  
+>> You can watc one of the following videos in advance to get an overview about the first steps in **ADT for Visual Studio Code**.
+>>This video is relevant in the SAP-led hands-on sessions:  
+>><video width="800" controls>
+  <source src="assests/ex0_adt_first_steps.mp4" type="video/mp4">
+  Video how to create a destination and an ABAP package
+</video>  
+>> 
+>>This video is relevant when you run the tutorial on your own.    
+>><video width="800" controls>
+  <source src="assests/ex0_adt_first_steps_pers.mp4" type="video/mp4">
+  Video how to create a destination and an ABAP package
+</video>
+
 <!--
 > - **RFC** — SAP S/4HANA or SAP S/4HANA Cloud Private Edition (requires SAP Logon configured on your machine)  
 -->
@@ -168,10 +180,12 @@ The ADT extension should be installed and opens the **ABAP Development Tools for
 8. Press **`Enter`**. 
 
    > ℹ️ **Note**: The connection is established and a dialog is opened on the right bottom for a few seconds. From here, you can add the destination directly to your workspace. 
-   > 
-   >![Dialog to add the destination to the workspace directly](images/ex0_vs_code_create_add_destination_dialog.png)  
    >  
-   > If you have missed the dialog, you can choose **ABAP: Add Destination to Workspace...** from the **Command Palette** (**`Ctrl+Shift+P`** (macOS: **`Cmd+Shift+P`**)).
+   >![Dialog to add the destination to the workspace directly](images/ex0_vs_code_create_add_destination_dialog.png)  
+
+   
+   > ℹ️ ⚠ **Important Note** ⚠: If you have missed the dialog, you can choose **ABAP: Add Destination to Workspace...** from the **Command Palette** (**`Ctrl+Shift+P`** (macOS: **`Cmd+Shift+P`**)).
+
 
 9. Choose the **`Add Destination to Workspace`** button.  
 
@@ -453,17 +467,20 @@ Get familiar with the [**ABAP Developemnt Tools for VS Code**](https://help.sap.
 
 ### Key UI areas for ABAP development
 
-| Area | Location | Purpose |
-|------|----------|---------|
-| **Activity Bar** | Far left | To switch between Explorer, Search, Source Control, Run & Debug, Extensions |
-| **Command Palette** | At the top | To trigger features and functions |
-| **Explorer (Workspace)** | Left sidebar | To navigate your ABAP system hierarchy — packages, object types, objects |
-| **Editor** | Center | To edit ABAP source code (classes, CDS views, behavior definitions, etc.) |
-| **Coding agent chat** (e.g. GitHub Copilot) | Right sidebar or panel | AI-powered **Chat** view. You will run MCP tool prompts here. |
-| **Outline** | Left sidebar | For navigation within the structure of ABAP classes and interfaces |
-| **Problems** panel | Bottom | Syntax errors and warnings |
-| **Terminal** panel | Bottom | Integrated shell |
-| **Status Bar** | Very bottom | Current line/column, language, connected system |
+![Sample of how 'ADT for Visual Studio Code' has been integrated into 'Visual Studio Code'](images/ex0_adt_vscode_ui.png) 
+
+|Number |Area | Location | Purpose |
+|----|------|----------|---------|
+|1| **Activity Bar** | Far left | To switch between Explorer, Search, Source Control, Run & Debug, Extensions |
+|2| **Command Palette** | At the top | To trigger features and functions |
+|3| **Explorer (Workspace)** | Left sidebar | To navigate your ABAP system hierarchy — packages, object types, objects |
+|4| **Editor** | Center | To edit ABAP source code (classes, CDS views, behavior definitions, etc.) |
+|5| **Hover** | Center | To display code element information |
+|6| **Coding agent chat** (e.g. GitHub Copilot) | Right sidebar or panel | AI-powered **Chat** view. You will run MCP tool prompts here. |
+|7| **Outline** | Left sidebar | For navigation within the structure of ABAP classes and interfaces |
+|8| **Problems** panel | Bottom | Syntax errors and warnings |
+|9| **Terminal** panel | Bottom | Integrated shell |
+|10| **Status Bar** | Very bottom | Current line/column, language, connected system |
 
 > **Further reading**: [User Interface](https://code.visualstudio.com/docs/editing/getting-started/userinterface)
 
@@ -504,18 +521,20 @@ You have the following possibilities:
 
 ---
 
-## Summary & Next Exercise
-[^Top of page](#)
-
-You have successfully:
+In this exercise, Now that you have successfully:
 - Installed **Visual Studio Code** and the **ABAP Development Tools for Visual Studio Code** extension (which includes the ADT MCP server)
 - Created a destination and connected Visual Studio Code to your ABAP system
 - Defined your group ID (`###`) for artifact naming
 - Created an ABAP package
 - Added the destination to your workspace and authenticated
-- Verified and explored the **Visual Studio Code** areas and features for ABAP development
+- Verified and explored the **Visual Studio Code** areas and features for ABAP development, ...
 
-You can continue with the next exercise:   
+You can continue with the exercise:   
 — **[Exercise 1: Get-to-Know and Verify the Enablement of the ADT MCP Server](../ex01/README.md)**
+
+---
+
+## Summary & Next Exercise
+[^Top of page](#)
 
 ---

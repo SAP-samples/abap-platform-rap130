@@ -249,29 +249,20 @@ Verify:
 ## Summary
 [^Top of page](#)
 
-In this exercise, you've:
-- analyzed the relevant business objects about the impact when adding a new field
-- started implementing the ABAP data model extension.
-- implemented the business logic by calculating the value automatically.
-- exposed the field by making the field available through the service.
-- adapted the UI annotations to display the field in the object page and list report.
-- triggered a validation to test if the field is added as expected.
+In this exercise, you've learned how to ...
+- analyze the relevant business objects about the impact when adding a new field
+- start implementing the ABAP data model extension.
+- implement the business logic by calculating the value automatically.
+- expose the field by making the field available through the service.
+- adapte the UI annotations to display the field in the object page and list report.
+- triggere a validation to test if the field is added as expected.
 
 ---
 
-### What you built in this workshop
+You can continue with the optional exercise:
+- **[Exercise 8: Create a Custom Agent _(Optional)_](../ex08/README.md)**
 
-Over this course, you have:
-
-1. ✅ Set up Visual Studio Code with the ADT extension and connected to an ABAP system
-2. ✅ Enabled and configured the ADT MCP Server with your coding agent
-3. ✅ Generated a complete RAP UI service using AI-driven ADT MCP tool calls
-4. ✅ Explored and adjusted the generated artifacts in Visual Studio Code
-5. ✅ Published the service and previewed the app in the default browser
-6. ✅ Crated a helper class and added a validation
-7. ✅ Generated and ran ABAP Unit tests 
-8. ✅ Debugged your ABAP source code 
-9. ✅ Enhanced the RAP UI service by implementing a new field with Agentic AI
+---
 
 **[↑ Back to Tutorial Home](../../README.md)**
 
