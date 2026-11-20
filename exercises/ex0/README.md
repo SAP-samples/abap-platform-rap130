@@ -130,22 +130,24 @@ The ADT extension should be installed and opens the **ABAP Development Tools for
 [^Top of page](#)
 
 > Open Visual Studio Code and create a **destination** to establish a system connection to your ABAP system. Add the destination to your workspace. 
-
-> ℹ️ **Hint**: You can watch this video in advance to get an overview about the first steps in **ADT for Visual Studio Code**
->This video is relevant in the SAP-led hands-on sessions:  
-><video width="800" controls>
-  <source src="assests/ex0_adt_first_steps.mp4" type="video/mp4">
-  Video how to create a destination and an ABAP package
-</video>
->
->This video is relevant when you run the tutorial in your personnel sessions:  
-><video width="800" controls>
-  <source src="assests/ex0_adt_first_steps_pers.mp4" type="video/mp4">
-  Video how to create a destination and an ABAP package
-</video>
 >
 >When creating a destination, the following connection types are supported:
 > - **HTTP** — SAP Business AI Platform or SAP S/4HANA Cloud Public Edition  
+
+>> ℹ️ **Hint**:  
+>> You can watc one of the following videos in advance to get an overview about the first steps in **ADT for Visual Studio Code**.
+>>This video is relevant in the SAP-led hands-on sessions:  
+>><video width="800" controls>
+  <source src="assests/ex0_adt_first_steps.mp4" type="video/mp4">
+  Video how to create a destination and an ABAP package
+</video>  
+>> 
+>>This video is relevant when you run the tutorial in your personnel sessions.    
+>><video width="800" controls>
+  <source src="assests/ex0_adt_first_steps_pers.mp4" type="video/mp4">
+  Video how to create a destination and an ABAP package
+</video>
+
 <!--
 > - **RFC** — SAP S/4HANA or SAP S/4HANA Cloud Private Edition (requires SAP Logon configured on your machine)  
 -->
