@@ -28,13 +28,17 @@ To complete the exercises, you need to ...
 >- Download and to install the **ABAP Development Tools extension** (a.k.a. ABAP development tools for Visual Studio Code from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SAPSE.adt-vscode).  
 > ℹ️ **Note**:  The extension already contains the built-in ADT MCP Server.
 >
->- A coding agent is required to call ADT MCP tools and read/edit ABAP files. Therefore, install a **coding agent** extension in Visual Studio Code that supports either a virtual workspace file system, e. g. [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot). Use your own GitHub Copilot license for this SAP event.
- > ℹ️ **Note**:  
- - **GitHub Copilot** is the primary tested agent and the one used in this tutorial.  
- - Command-Line Interface (CLI), using e. g. [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code), is also supported. Other coding agents are also supported.  
+>- A coding agent is required to call ADT MCP tools and read/edit ABAP files. Therefore, install a **coding agent** extension in Visual Studio Code that supports either a virtual workspace file system, e. g. [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot). Use your own GitHub Copilot license for this SAP event.   
+ >>   ℹ️ **Important Note**:  
+ >>    - **GitHub Copilot** is the primary tested agent and the one used in this tutorial.  Other Chat-based coding assists are also supported.  
+ >>  - Command-Line Interface (CLI), using e. g. [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code), is also supported.    
+>>   - Artificial Intelligence (AI) generates results based on multiple sources. Outputs may contain errors and inaccuracies. Consider reviewing all generated results and adjust as necessary.  
+>>   - Generative AI may produce inaccurate, incomplete, or biased information. Always verify important details before acting on them.  
 >
 >- Connect your client with a supported ABAP system* by creating and adding a destination to your workspace.  
-> ℹ️ **Note**(*): Only SAP Business AI ABAP environment, SAP S/4HANA Cloud Public Edition, SAP S/4HANA Cloud Private 2025, 2023, 2022, 2021 Edition are currently supported.
+> 
+>- Only SAP Business AI ABAP environment, SAP S/4HANA Cloud Public Edition, SAP S/4HANA Cloud Private 2025, 2023, 2022, 2021 Edition are currently supported.
+>- For testing purpose, you can (Start your free trial of SAP Business Technology Platform)[https://www.sap.com/products/technology-platform/trial.html]
 >
 >- Install and to import the [ABAP Flight Reference Scenario](https://github.com/SAP-samples/abap-platform-refscen-flight) as well as generate the relevant data.
 
@@ -53,19 +57,21 @@ In this hands-on session, you will learn how to use the **ADT MCP server** and *
   <summary>🔵 Click to expand!</summary>
 
   This hands-on session covers the full developer journey from the setup of a Visual Studio Code environment to a fully functional, AI-enhanced transactional app.
+
 > You will learn how to ...
-> - Set up Visual Studio Code with the ADT for Visual Studio Code extension.
-> - Connect the **ADT for VS Code extension** to the ABAP system* by creating a destination.
-> - Enable the built-in **ADT MCP server** enablement in the settings and its connection to the **coding agent**. 
-> - Use ADT MCP tools to **generate a RAP UI service** (Travel + Booking) and its **OData UI service**—all through natural language prompts.
-> - Explore and adjust the generated artifacts (CDS views, behavior definitions, metadata extensions) directly in Visual Studio Code.
-> - Publish the service binding and preview the SAP Fiori app in the default browser.
-> - Add backend validations.
-> - Run ABAP Unit tests from Visual Studio Code.  
+> - set up Visual Studio Code with the ADT for Visual Studio Code extension.
+> - connect the **ADT for VS Code extension** to the ABAP system* by creating a destination.
+> - enable the built-in **ADT MCP server** enablement in the settings and its connection to the **coding agent**. 
+> - use ADT MCP tools to **generate a RAP UI service** (Travel + Booking) and its **OData UI service**—all through natural language prompts.
+> - explore and adjust the generated artifacts (CDS views, behavior definitions, metadata extensions) directly in Visual Studio Code.
+> - publish the service binding and preview the SAP Fiori app in the default browser.
+> - add backend validations.
 > 
-> and optionally, to ...
-> - Debug the SAP Fiori app from Visual Studio Code.
-> - Add the implementation of a new field to an existing RAP UI service using the **coding agent**.
+> and optionally, to ...  
+> - debug the SAP Fiori app from Visual Studio Code.
+> - run ABAP Unit tests from Visual Studio Code.  
+> - add the implementation of a new field to an existing RAP UI service using the **coding agent**.
+> - create a custom agent.
 
 </details>
 
@@ -73,7 +79,7 @@ In this hands-on session, you will learn how to use the **ADT MCP server** and *
 
 Follow these steps to build a SAP Fiori App using the ADT MCP Server and a coding agent (GitHub Copilot or compatible) in Visual Studio Code.
 
-### Core Exercises
+### Main Exercises
 
 | Exercises | -- |
 | ------------- | -- |
@@ -82,14 +88,15 @@ Follow these steps to build a SAP Fiori App using the ADT MCP Server and a codin
 | [Exercise 2: Generate a RAP UI Service with ADT MCP Tools and Preview the Travel App](exercises/ex02/README.md) | -- | 
 | [Exercise 3: Publish and Preview the Travel App](exercises/ex03/README.md)| -- |
 | [Exercise 4: Add a Validation](exercises/ex04/README.md)| -- |
-| [Exercise 5: Generate ABAP Unit Tests](exercises/ex05/README.md)| -- |
 
 ### Optional Exercises
 
 | Exercises | -- |
 | ------------- | -- | 
-| [Exercise 6: Debug ABAP Code in Visual Studio Code](exercises/ex06/README.md)| -- |
+| [Exercise 5: Debug ABAP Code in Visual Studio Code](exercises/ex05/README.md)| -- |
+| [Exercise 6: Generate ABAP Unit Tests](exercises/ex06/README.md)| -- |
 | [Exercise 7: Add a Field to the Existing RAP UI Service](exercises/ex07/README.md) | -- | 
+| [Exercise 8: Create a Custom Agent](exercises/ex08/README.md) | -- | 
 
 
 ## Known Issues

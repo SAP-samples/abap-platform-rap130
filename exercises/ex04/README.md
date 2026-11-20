@@ -242,13 +242,15 @@ In this exercise, you will use your coding agent in **Agent** mode to define and
 ## Summary & Next Exercise
 [^Top of page](#)
 
-Now that you've:
-- Used your coding agent in Agent mode to define and implement the 'validateCustomer' validation in one step
-- Tested the validation in the Preview—confirming that invalid customer IDs are rejected
+In this exercise, you've learned how to ...  
+- use your coding agent in Agent mode to define and implement the 'validateCustomer' validation in one step
+- test the validation in the Preview—confirming that invalid customer IDs are rejected, ...
 
-you can continue with the optional exercises:
-- **[Exercise 5: Generate ABAP Unit Tests](../ex05/README.md)**
-- **[Exercise 6: Debug ABAP Code in Visual Studio Code (*Optional*)](../ex06/README.md)**
-- **[Exercise 7: Add a Field to the Existing RAP UI Service (*Optional*)](../ex07/README.md)**
+You can continue with the exercise:  
+- **[Exercise 5: Debug ABAP Code in Visual Studio Code (*Optional*)](../ex05/README.md)**
+
+---
+
+**[↑ Back to Tutorial Home](../../README.md)**
 
 ---
