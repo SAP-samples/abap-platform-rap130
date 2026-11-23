@@ -31,7 +31,7 @@ Ensure that your ABAP system contains the [ABAP Flight Reference Scenario](https
 ### Exercises
 
 - [0.1 - Install Visual Studio Code and the ABAP Development Tools Extension](#exercise-01-install-visual-studio-code-and-the-abap-development-tools-for-vs-code-extension)  
-- [0.2 - Connect Visual Studio Code with the ABAP System](#exercise-02-connect-visual-studio-code-with-the-abap-system)
+- [0.2 - Create a Destination to Connect Visual Studio Code with the ABAP System](#exercise-02-create-a-destination-to-connect-visual-studio-code-with-the-abap-system)
 - [0.3 - Log on to the ABAP system](#exercise-03-log-on-to-the-abap-system)
 - [0.4 - Define your Group ID](#exercise-04-define-your-group-id)
 - [0.5 - Create your ABAP Package](#exercise-05-create-your-abap-package)
@@ -126,27 +126,13 @@ The ADT extension should be installed and opens the **ABAP Development Tools for
 
 ---
 
-## Exercise 0.2: Connect Visual Studio Code with the ABAP System
+## Exercise 0.2: Create a Destination to Connect Visual Studio Code with the ABAP System
 [^Top of page](#)
 
 > Open Visual Studio Code and create a **destination** to establish a system connection to your ABAP system. Add the destination to your workspace. 
 >
 >When creating a destination, the following connection types are supported:
 > - **HTTP** — SAP Business AI Platform or SAP S/4HANA Cloud Public Edition  
-
->> ℹ️ **Hint**:  
->> You can watc one of the following videos in advance to get an overview about the first steps in **ADT for Visual Studio Code**.
->>This video is relevant in the SAP-led hands-on sessions:  
->><video width="800" controls>
-  <source src="assests/ex0_adt_first_steps.mp4" type="video/mp4">
-  Video how to create a destination and an ABAP package
-</video>  
->> 
->>This video is relevant when you run the tutorial on your own.    
->><video width="800" controls>
-  <source src="assests/ex0_adt_first_steps_pers.mp4" type="video/mp4">
-  Video how to create a destination and an ABAP package
-</video>
 
 <!--
 > - **RFC** — SAP S/4HANA or SAP S/4HANA Cloud Private Edition (requires SAP Logon configured on your machine)  
@@ -177,15 +163,13 @@ The ADT extension should be installed and opens the **ABAP Development Tools for
 
 7. Type a short form as **ID** for the destination (e.g., 'RAP130').
 
-8. Press **`Enter`**. 
+8. Press **`Enter`** to confirm the dialog and then press the **Add Destination to Workspace** button in the dialog at the right bottom.  
 
-   > ℹ️ **Note**: The connection is established and a dialog is opened on the right bottom for a few seconds. From here, you can add the destination directly to your workspace. 
-   >  
-   >![Dialog to add the destination to the workspace directly](images/ex0_vs_code_create_add_destination_dialog.png)  
+    ![Dialog to add the destination to the workspace directly](images/ex0_vs_code_create_add_destination_dialog.png)  
 
+    The connection is established and a dialog is opened on the right bottom for a few seconds. From here, you can add the destination directly to your workspace. 
    
-   > ℹ️ ⚠ **Important Note** ⚠: If you have missed the dialog, you can choose **ABAP: Add Destination to Workspace...** from the **Command Palette** (**`Ctrl+Shift+P`** (macOS: **`Cmd+Shift+P`**)).
-
+    > ℹ️ **Information**: If you have missed the dialog, you can choose **ABAP: Add Destination to Workspace...** from the **Command Palette** (**`Ctrl+Shift+P`** (macOS: **`Cmd+Shift+P`**)).
 
 9. Choose the **`Add Destination to Workspace`** button.  
 
@@ -204,22 +188,6 @@ The destination has been created and now appears in the **Workspace** in the **E
   > ℹ️ **Note**: You can display and edit the destinations as JSON file. To open the JSON file in the editor, choose **ABAP: Open Destination Settings (JSON)** from the Command Pallette (**`Ctrl+Shift+P`**).  
   >
   > ![Display of the destination JSON file](images/ex0_destination_json.png)
-
-> ⚠️ Here is a summary of the relevant steps and data to be used: 
-
-   ```
-   Command Palette → 'ABAP: New Destination...'
-     ↓
-   Connection Type → HTTP
-     ↓
-   System URL → 'xyz'
-           ↓
-   Destination ID → 'RAP130'
-     ↓
-   Add destination to the workspace
-     ↓
-   ✅ Connection established and displayed in the Explorer!
-   ```
 
 <!-- 
 
@@ -498,6 +466,7 @@ Get familiar with the [**ABAP Developemnt Tools for VS Code**](https://help.sap.
 | Find/Replace | **`Ctrl+H`** | **`Cmd+H`** |
 | Run ABAP Unit Tests | **`Ctrl+Shift+F10`** | **`Cmd+Shift+F10`** |
 | Open Documentation | **`Ctrl+Shift+D`** | **`Cmd+Shift+D`** |
+| Open Settings (UI) | **`Ctrl+,`** | **`Cmd+,`** |
 
 > ℹ️ **Note**: 
 >- Use **Find/Replace** (**`Ctrl+H`**) to replace all occurrences of `###` with your group ID at once in any file. For more information, see [Keyboard Shortcuts for ABAP Development](https://help.sap.com/docs/abap-cloud/abap-development-tools-for-visual-studio-code/keyboard-shortcuts-for-abap-development)

@@ -106,8 +106,9 @@ In this exercise, you will use your coding agent in **Agent** mode to define and
 1. Open the 'Travel' behavior definition.
 
    > ℹ️ **Note**:  The name of the development object starts with 'ZR', for example **'ZR_TRAVEL###'**. Behavior definitions are located in the **Core Data Services** folder of the ABAP package. 
-
+<!--
    ![Display of the behavior definition in the Explorer](images/ex04_open_zrtravel_cds.png)  
+   -->
 
 2. Go to **Chat** view (**`Ctrl+Shift+I`**) and enter the following prompt and run then the agent:
 

@@ -19,6 +19,17 @@ You use [**Visual Studio Code**](https://code.visualstudio.com) and the [**ABAP 
 - [Contributing](#contributing)
 - [License](#license)
 
+---
+
+## Important Note
+
+>- **GitHub Copilot** is the primary tested coding agent and the one used in this tutorial.
+>- Other Chat-based and Command-Line Interface (CLI), e. g. [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code), coding assists are also supported. They are **not** in focus of this tutorial.    
+>- Artificial Intelligence (AI) generates results based on multiple sources. Outputs may contain errors and inaccuracies. Consider reviewing all generated results and adjust as necessary.  
+>- Generative AI may produce inaccurate, incomplete, or biased information. Always verify important details before acting on them.  
+
+---
+
 ## Requirements
 
 To complete the exercises, you need to ...
@@ -29,11 +40,6 @@ To complete the exercises, you need to ...
 > ℹ️ **Note**:  The extension already contains the built-in ADT MCP Server.
 >
 >- A coding agent is required to call ADT MCP tools and read/edit ABAP files. Therefore, install a **coding agent** extension in Visual Studio Code that supports either a virtual workspace file system, e. g. [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot). Use your own GitHub Copilot license for this SAP event.   
- >>   ℹ️ **Important Note**:  
- >>    - **GitHub Copilot** is the primary tested agent and the one used in this tutorial.  Other Chat-based coding assists are also supported.  
- >>  - Command-Line Interface (CLI), using e. g. [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code), is also supported.    
->>   - Artificial Intelligence (AI) generates results based on multiple sources. Outputs may contain errors and inaccuracies. Consider reviewing all generated results and adjust as necessary.  
->>   - Generative AI may produce inaccurate, incomplete, or biased information. Always verify important details before acting on them.  
 >
 >- Connect your client with a supported ABAP system* by creating and adding a destination to your workspace.  
 > 
