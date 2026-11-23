@@ -153,15 +153,23 @@ The ADT extension should be installed and opens the **ABAP Development Tools for
 
 3. Type 'ABAP: New Destination' and select **`ABAP: New Destination...`**.
 
+    ![Creation command](images/ex0_vs_code_dest_new.png)
+
 4. Select **HTTP** as the connection type.
 
-5. Enter the **System URL** to the ABAP system.  
+    ![HTTP connection type](images/ex0_vs_code_dest_new_http.png)
 
-    > ℹ️ **Note**: You can paste it from the clipboard into the command dialog in Visual Studio Code.
+5. Enter the **System URL** to the Public Cloud system.  
+
+    ![URL to the Public Cloud system](images/ex0_vs_code_dest_new_url.png)
+
+    > ℹ️ **Note**: You can paste the system URL from the clipboard into the command dialog in Visual Studio Code.
 
 6. Press **`Enter`**. 
 
 7. Type a short form as **ID** for the destination (e.g., 'RAP130').
+
+    ![Destination ID](images/ex0_vs_code_dest_new_id.png)
 
 8. Press **`Enter`** to confirm the dialog and then press the **Add Destination to Workspace** button in the dialog at the right bottom.  
 
