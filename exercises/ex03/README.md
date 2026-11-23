@@ -12,7 +12,7 @@ In this exercise, you will publish the local service endpoint of your OData V4 s
 
 - [3.1 - Publish the RAP UI Service](#exercise-31-publish-the-rap-ui-service)
 - [3.2 - Preview the Travel App in the Browser](#exercise-32-preview-the-travel-app-in-the-browser)
-- [3.3 - Preview the Data of the Travel Database Table in ADT for VS Code](#exercise-33-preview-the-data-of-the-travel-database-table-in-adt-for-vs-code)
+- [3.3 - Preview the Data of the Travel Database Table in ADT](#exercise-33-preview-the-data-of-the-travel-database-table-in-adt)
 - [Summary & Next Exercise](#summary--next-exercise)
 
 > ℹ️ **Reminder**: Don't forget to replace all occurrences of the placeholder **`###`** with your group ID in the exercise steps below.
@@ -123,7 +123,7 @@ In this exercise, you will publish the local service endpoint of your OData V4 s
 
 ---
 
-## Exercise 3.3: Preview the data of the Travel Database Table in ADT for VS Code
+## Exercise 3.3: Preview the data of the Travel Database Table in ADT
 [^Top of page](#)
 
 > Preview the data of the 'Travel' database table in the **SQL Notebook** in ADT for VS Code.
@@ -139,17 +139,22 @@ In this exercise, you will publish the local service endpoint of your OData V4 s
 
    ![Creation workflow of a new SQL notebook](images/ex03_sql_notebook_new.png)
 
-4. Enter the **Name** of your SQL notebook and confirm with `Enter`.
+4. Define and enter a **Name** for your SQL notebook (e.g., `travel_select_all`) and confirm with **Enter**.
 
-   ![Naming](images/ex03_sql_notebook_new_name.png)
+   ![Sample for a naming](images/ex03_sql_notebook_new_name.png)
 
    The SQL notebook is created and opened.
 
-5. Enter the SQL statement for the data you want to display.
+5. Enter the SQL statement for the data you want to display, e.g.   
+
+   ```
+   Select * from ZTRAVEL_D###
+   ```
+   > ℹ️ **Note**: You database table might be different.
 
    ![SQL select](images/ex03_sql_notebook_select.png)
 
-6. Confirm with `Execute`.
+6. To confirm, press the **Execute** icon with the arrow.
 
    ![Button to execute the SQL statement](images/ex03_sql_notebook_execute.png)
 
