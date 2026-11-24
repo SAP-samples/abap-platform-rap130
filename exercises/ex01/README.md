@@ -12,7 +12,7 @@ This means, the ADT MCP server exposes a set of ABAP development tools (so-calle
 ## Procedure 
 At first, you need to [enable the ADT MCP server](https://help.sap.com/docs/abap-cloud/abap-development-tools-for-visual-studio-code/enabling-adt-mcp-server) in the settings of your ABAP Development Tools (ADT) extension manually. Otherwise, the coding agent has no access to the ADT MCP tools.  
 
-You will use your coding agent in **Agent** mode together with the ADT MCP tools to generate a RAP UI service using the ABAP Cloud Generator and to create a complete transactional app ('Travel' + 'Booking' entities)—all driven by natural language prompts using the coding agent provided in the **Chat** view.  
+You will use your coding agent in **Agent** mode together with the ADT MCP tools to generate a RAP UI service using the ABAP Cloud Generator and to create a complete transactional app ('Travel' + 'Booking' entities)—all driven by prompts in human natural language using the coding agent that is connected through the **Chat** view.  
 
 >ℹ️ **Note**:  This hands-on session uses [**GitHub Copilot**](https://docs.github.com/en/copilot/get-started/quickstart) as coding agent. You can also use other Chat-based coding agent as well as Command Line Interface (CLI)-based coding agents, such as [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code).
 
