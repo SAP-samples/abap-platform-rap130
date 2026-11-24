@@ -7,7 +7,7 @@ Welcome to **RAP130**!
 
 Before building your app, you need to set up your development environment in Visual Studio Code and to connect it to your ABAP system.
 
-In this exercise, you prepare your PC/laptop to run this tutorial.
+In this exercise, you prepare your PC/laptop in order to run this tutorial.
 
 ---
 
