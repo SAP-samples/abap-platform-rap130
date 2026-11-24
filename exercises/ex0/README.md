@@ -177,7 +177,7 @@ The ADT extension should be installed and opens the **ABAP Development Tools for
 
     The connection is established and a dialog is opened on the right bottom for a few seconds. From here, you can add the destination directly to your workspace. 
    
-    > ℹ️ **Information**: If you have missed the dialog, you can choose **ABAP: Add Destination to Workspace...** from the **Command Palette** (**`Ctrl+Shift+P`** (macOS: **`Cmd+Shift+P`**)).
+    > ℹ️ **Information**: If you have missed the dialog, choose **ABAP: Add Destination to Workspace...** from the **Command Palette** (**`Ctrl+Shift+P`** (macOS: **`Cmd+Shift+P`**)).
 
 9. Choose the **`Add Destination to Workspace`** button.  
 

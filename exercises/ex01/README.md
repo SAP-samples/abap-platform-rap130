@@ -16,9 +16,6 @@ You will use your coding agent in **Agent** mode together with the ADT MCP tools
 
 >ℹ️ **Note**:  This hands-on session uses [**GitHub Copilot**](https://docs.github.com/en/copilot/get-started/quickstart) as coding agent. You can also use other Chat-based coding agent as well as Command Line Interface (CLI)-based coding agents, such as [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code).
 
-> ⚠ **Warning regarding AI outputs** ⚠  
-> The ADT MCP server is an **experimental feature** that may change at any time without notice. It is not intended for productive use. Please back up your data before using it.
-
 ### Further Information
 - [ADT MCP Tools](https://help.sap.com/docs/abap-cloud/abap-development-tools-for-visual-studio-code/mcp-tools?locale=en-US) 
 - [Model Context Protocol (MCP)](https://modelcontextprotocol.io/)
