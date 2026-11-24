@@ -135,6 +135,8 @@ In this exercise, you will publish the local service endpoint of your OData V4 s
 
 2. Type 'ABAP: SQL Notebook' and select **`ABAP: SQL Notebook`**.
 
+   ![Selection in the menu](images/ex03_sql_notebook_menu.png)
+
 3. Create a new SQL notebook and choose **New SQL Notebook**.
 
    ![Creation workflow of a new SQL notebook](images/ex03_sql_notebook_new.png)
@@ -174,7 +176,8 @@ In this exercise, you will publish the local service endpoint of your OData V4 s
 In this exercise, you've learned how to ...  
 - publish the local service endpoint of the service binding
 - open and to test the preview of the SAP Fiori app in the browser
-- create a test 'Travel' entry to verify the RAP UI service is working
+- create a test 'Travel' entry to verify the RAP UI service is working   
+- preview the 'Travel' data stored in a database table in the SQL Notebook
 
 You can continue with the exercise:  
 - **[Exercise 4: Add a Validation](../ex04/README.md)**
