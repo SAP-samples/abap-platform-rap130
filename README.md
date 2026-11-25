@@ -7,7 +7,7 @@
 
 This repository contains the material of the hands-on session **RAP130 - Build apps and web APIs with ABAP Cloud using agentic AI**. It describes how to build a transactional SAP Fiori elements app for travel management using the **ABAP RESTful Application Programming Model (RAP)**.
 
-You use [**Visual Studio Code**](https://code.visualstudio.com) and the [**ABAP Development Tools for VS Code (ADT)**](https://marketplace.visualstudio.com/items?itemName=SAPSE.adt-vscode) extension to access and develop ABAP source code in the ABAP system. ADT contains the integrated **ADT MCP server** that enables to generate a RAP UI service and to enhance your application using the **ADT MCP tools**. For agentic AI-based ABAP development you use a coding agent, e. g. [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) or  [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code).
+You use [**Visual Studio Code**](https://code.visualstudio.com) and the [**ABAP Development Tools for VS Code (ADT)**](https://marketplace.visualstudio.com/items?itemName=SAPSE.adt-vscode) extension to access and develop ABAP source code in the ABAP system. ADT contains the integrated **ADT MCP server** that enables to generate a RAP UI service and to enhance your application using the **ADT MCP tools**. For agentic AI-based ABAP development you use a coding agent, e. g. [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot).
 
 **Table of Contents**
 - [Requirements](#requirements)
@@ -27,6 +27,7 @@ You use [**Visual Studio Code**](https://code.visualstudio.com) and the [**ABAP 
 >- Other Chat-based and Command-Line Interface (CLI), e. g. [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code), coding assists are also supported. They are **not** in focus of this tutorial.    
 >- Artificial Intelligence (AI) generates results based on multiple sources. Outputs may contain errors and inaccuracies. Consider reviewing all generated results and adjust as necessary.  
 >- Generative AI may produce inaccurate, incomplete, or biased information. Always verify important details before acting on them.  
+>- The [Security Considerations and Recommendations](https://help.sap.com/docs/abap-cloud/abap-development-tools-for-visual-studio-code/security-recommendations-and-considerations?ai=true) provide an overview for developers before using the ADT MCP Server.
 
 ---
 
