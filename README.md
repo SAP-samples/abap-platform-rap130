@@ -45,7 +45,6 @@ To complete the exercises, you need to ...
 >- Connect your client with a supported ABAP system* by creating and adding a destination to your workspace.  
 > 
 >- Only SAP Business AI ABAP environment, SAP S/4HANA Cloud Public Edition, SAP S/4HANA Cloud Private 2025, 2023, 2022, 2021 Edition are currently supported.
->- For testing purpose, you can (Start your free trial of SAP Business Technology Platform)[https://www.sap.com/products/technology-platform/trial.html]
 >
 >- Install and to import the [ABAP Flight Reference Scenario](https://github.com/SAP-samples/abap-platform-refscen-flight) as well as generate the relevant data.
 
